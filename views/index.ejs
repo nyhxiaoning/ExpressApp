@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+</head>
+<body>
+<form action="/search" method="post">
+    姓名：<input type="text" name="s_name" value="<%= datas.name %>"><br>
+    <input type="submit" value="查询">
+</form>
+<table>
+    <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>密码</th>
+        <th>操作</th>
+    </tr>
+    <% for(var i = 0; i < datas.length; i++) {%>
+        <tr>
+            <td><%= datas[i].uno %></td>
+            <td><%= datas[i].uname %></td>
+            <td><%= datas[i].pass %></td>
+            <td><a href="/add">添加用户</a></td>
+            <td><a href="/del/<%= datas[i].uno %>">删除</a></td>
+            <td><a href="/toUpdate/<%= datas[i].uno %>">修改</a></td>
+        </tr>
+    <% } %>
+</table>
+</body>
+</html>

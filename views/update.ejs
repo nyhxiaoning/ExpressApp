@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改页面</title>
+</head>
+<body>
+<form action="/update" method="post">
+    <input type="hidden" value="<%= datas[0].uno %>" name="id">
+    姓名：<input type="text" name="name" value="<%= datas[0].uname %>"><br>
+    密码: <input type="text" name="password" value="<%= datas[0].pass %>"><br>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>
